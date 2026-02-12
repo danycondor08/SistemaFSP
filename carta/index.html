@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carta de Aceptación – FSP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- MISMO CSS que usas en /carga (ajusta la ruta si hace falta) -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="app-body">
+  <!-- HEADER SUPERIOR -->
+  <header class="app-header">
+    <div class="app-header__left">
+      <div class="app-header__logo">
+        <img src="../assets/logo.png" alt="FSP" />
+      </div>
+      <span class="app-header__title">Carta de Aceptación</span>
+    </div>
+
+    <div class="app-header__right">
+      <span class="app-header__user-name">Natalia Moreno</span>
+      <div class="app-header__avatar">
+        <span>NM</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <!-- STEPPER -->
+    <section class="stepper">
+      <div class="stepper__item stepper__item--done">
+        <div class="stepper__circle">1</div>
+        <span>Checklist</span>
+      </div>
+
+      <div class="stepper__item stepper__item--done">
+        <div class="stepper__circle">2</div>
+        <span>Carga de evidencia</span>
+      </div>
+
+      <div class="stepper__item stepper__item--active">
+        <div class="stepper__circle">3</div>
+        <span>Carta de Aceptación</span>
+      </div>
+    </section>
+
+    <!-- CARD 1: Datos para generar carta -->
+    <section class="card-section">
+      <h2 class="card-section__title">Carta de aceptación</h2>
+      <p class="carta-subtitle">
+        Completa los campos para generar la carta
+      </p>
+
+      <div class="form-grid form-grid--3">
+        <div class="form-group">
+          <label>Nombre del empleado</label>
+          <input type="text" placeholder="-" />
+        </div>
+
+        <div class="form-group">
+          <label>Comuna</label>
+          <select>
+            <option>Seleccionar</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Tienda</label>
+          <select>
+            <option>Seleccionar</option>
+          </select>
+        </div>
+
+        <div class="form-group form-group--icon">
+          <label>Fecha de inventario</label>
+          <input type="text" placeholder="-" />
+          <button class="input-icon-btn">
+            <i class="fa-regular fa-calendar"></i>
+          </button>
+        </div>
+
+        <div class="form-group">
+          <label>Nombre del supervisor</label>
+          <input type="text" placeholder="-" />
+        </div>
+
+        <div class="form-group">
+          <label>Título del supervisor</label>
+          <input type="text" placeholder="-" />
+        </div>
+      </div>
+
+      <div class="actions actions--center">
+        <button class="btn btn-primary btn-icon">
+          <i class="fa-solid fa-download"></i>
+          Descargar carta de aceptación
+        </button>
+      </div>
+    </section>
+
+    <!-- CARD 2: Upload de carta firmada -->
+    <section class="card-section upload-card">
+      <h2 class="card-section__title">Adjuntar carta de aceptación</h2>
+      <p class="carta-subtitle">
+        Una vez impresa y firmada, sube el archivo PDF aquí.
+      </p>
+
+      <div class="upload-dropzone" id="dropzone">
+        <input type="file" id="file-input" />
+        <div class="upload-dropzone__inner">
+          <div class="upload-icon">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+          </div>
+          <p>Arrastra los archivos aquí o haz clic para subirlos</p>
+        </div>
+      </div>
+
+      <div class="actions actions--right">
+        <button class="btn btn-primary">Guardar</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="app-footer">
+    <span>2025 © fashionspark.</span>
+    <span>Desarrollado por Cpsoluciones</span>
+  </footer>
+
+  <!-- Font Awesome -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- JS simple para dropzone -->
+  <script>
+    const dz = document.getElementById('dropzone');
+    const fi = document.getElementById('file-input');
+
+    dz.addEventListener('click', () => fi.click());
+
+    dz.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dz.classList.add('upload-dropzone--hover');
+    });
+
+    dz.addEventListener('dragleave', () => {
+      dz.classList.remove('upload-dropzone--hover');
+    });
+
+    dz.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dz.classList.remove('upload-dropzone--hover');
+      console.log(e.dataTransfer.files);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carga de evidencia – FSP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="app-body">
+  <!-- HEADER SUPERIOR -->
+  <header class="app-header">
+    <div class="app-header__left">
+      <div class="app-header__logo">
+        <img src="../assets/logo.png" alt="FSP" />
+      </div>
+      <span class="app-header__title">Carga de evidencia</span>
+    </div>
+
+    <div class="app-header__right">
+      <span class="app-header__user-name">Natalia Moreno</span>
+      <div class="app-header__avatar">
+        <span>NM</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <!-- STEPPER -->
+    <section class="stepper">
+      <div class="stepper__item stepper__item--done">
+        <div class="stepper__circle">1</div>
+        <span>Checklist</span>
+      </div>
+
+      <div class="stepper__item stepper__item--active">
+        <div class="stepper__circle">2</div>
+        <span>Carga de evidencia</span>
+      </div>
+
+      <div class="stepper__item">
+        <div class="stepper__circle">3</div>
+        <span>Carta de Aceptación</span>
+      </div>
+    </section>
+
+    <!-- CARD PRINCIPAL: DROPZONE -->
+    <section class="card-section upload-card">
+      <h2 class="card-section__title">Adjuntar archivos o fotos de evidencia</h2>
+
+      <div class="upload-dropzone" id="dropzone">
+        <input type="file" id="file-input" multiple />
+        <div class="upload-dropzone__inner">
+          <div class="upload-icon">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+          </div>
+          <p>Arrastra los archivos aquí o haz clic para subirlos</p>
+        </div>
+      </div>
+
+      <div class="actions actions--right">
+        <button class="btn btn-outline">Guardar Borrador</button>
+        <button class="btn btn-primary">Continuar</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="app-footer">
+    <span>2025 © fashionspark.</span>
+    <span>Desarrollado por Cpsoluciones</span>
+  </footer>
+
+  <!-- Font Awesome -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- JS simple para abrir el input al hacer click en la zona -->
+  <script>
+    const dropzone = document.getElementById('dropzone');
+    const fileInput = document.getElementById('file-input');
+
+    dropzone.addEventListener('click', () => fileInput.click());
+
+    dropzone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropzone.classList.add('upload-dropzone--hover');
+    });
+
+    dropzone.addEventListener('dragleave', () => {
+      dropzone.classList.remove('upload-dropzone--hover');
+    });
+
+    dropzone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropzone.classList.remove('upload-dropzone--hover');
+      // Aquí podrías manejar los archivos: e.dataTransfer.files
+      console.log(e.dataTransfer.files);
+    });
+  </script>
+</body>
+</html>

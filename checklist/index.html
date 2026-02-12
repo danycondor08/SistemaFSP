@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checklist – FSP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="app-body">
+  <!-- HEADER SUPERIOR -->
+  <header class="app-header">
+    <div class="app-header__left">
+      <div class="app-header__logo">
+        <img src="../assets/logo.png" alt="FSP" />
+      </div>
+      <span class="app-header__title">Checklist</span>
+    </div>
+
+    <div class="app-header__right">
+      <span class="app-header__user-name">Natalia Moreno</span>
+      <div class="app-header__avatar">
+        <span>NM</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <!-- STEPPER -->
+    <section class="stepper">
+      <div class="stepper__item stepper__item--done">
+        <div class="stepper__circle">1</div>
+        <span>Checklist</span>
+      </div>
+
+      <div class="stepper__item stepper__item--active">
+        <div class="stepper__circle">2</div>
+        <span>Carga de evidencia</span>
+      </div>
+
+      <div class="stepper__item">
+        <div class="stepper__circle">3</div>
+        <span>Carta de Aceptación</span>
+      </div>
+    </section>
+
+    <!-- CARD: DATOS DE TIENDA -->
+    <section class="card-section">
+      <h2 class="card-section__title">Datos de tienda</h2>
+
+      <div class="form-grid form-grid--3">
+        <div class="form-group">
+          <label>Código de tienda</label>
+          <input type="text" placeholder="-" />
+        </div>
+
+        <div class="form-group">
+          <label>Tienda</label>
+          <select>
+            <option>Seleccionar</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Empresa</label>
+          <select>
+            <option>Seleccionar</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Jefe Zonal</label>
+          <input type="text" placeholder="-" />
+        </div>
+
+        <div class="form-group">
+          <label>Tipo</label>
+          <select>
+            <option>Seleccionar</option>
+          </select>
+        </div>
+
+        <div class="form-group form-group--icon">
+          <label>Fecha de inventario</label>
+          <input type="text" placeholder="-" />
+          <button class="input-icon-btn" type="button">
+            <i class="fa-regular fa-calendar"></i>
+          </button>
+        </div>
+
+        <div class="form-group">
+          <label>Unidades informadas</label>
+          <input type="text" placeholder="-" />
+        </div>
+
+        <div class="form-group">
+          <label>Pisos</label>
+          <input type="text" placeholder="-" />
+        </div>
+
+        <div class="form-group">
+          <label>Bodegas</label>
+          <input type="text" placeholder="-" />
+        </div>
+
+        <div class="form-group form-group--icon">
+          <label>Horario de cierre</label>
+          <input type="text" placeholder="-" />
+          <button class="input-icon-btn" type="button">
+            <i class="fa-regular fa-clock"></i>
+          </button>
+        </div>
+
+        <div class="form-group form-group--icon">
+          <label>Horario de apertura</label>
+          <input type="text" placeholder="-" />
+          <button class="input-icon-btn" type="button">
+            <i class="fa-regular fa-clock"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARD: VISITA PREVIA -->
+    <section class="card-section">
+      <h2 class="card-section__title">Visita Previa</h2>
+
+      <div class="form-grid form-grid--3">
+        <div class="form-group form-group--icon">
+          <label>Fecha de visita</label>
+          <input type="text" placeholder="-" />
+          <button class="input-icon-btn" type="button">
+            <i class="fa-regular fa-calendar"></i>
+          </button>
+        </div>
+
+        <div class="form-group form-group--icon">
+          <label>Hora de visita</label>
+          <input type="text" placeholder="-" />
+          <button class="input-icon-btn" type="button">
+            <i class="fa-regular fa-clock"></i>
+          </button>
+        </div>
+
+        <div class="form-group">
+          <label>Encargado visita empresa</label>
+          <input type="text" placeholder="-" />
+        </div>
+
+        <div class="form-group">
+          <label>Encargado tienda</label>
+          <select>
+            <option>Seleccionar</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Cargo encargado tienda</label>
+          <select>
+            <option>Seleccionar</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Unidades bodega aprox</label>
+          <input type="text" placeholder="-" />
+        </div>
+
+        <div class="form-group">
+          <label>Unidades sala aprox</label>
+          <input type="text" placeholder="-" />
+        </div>
+
+        <div class="form-group form-group--icon">
+          <label>Horario inicio bodega</label>
+          <input type="text" placeholder="-" />
+          <button class="input-icon-btn" type="button">
+            <i class="fa-regular fa-clock"></i>
+          </button>
+        </div>
+
+        <div class="form-group form-group--icon">
+          <label>Horario inicio sala</label>
+          <input type="text" placeholder="-" />
+          <button class="input-icon-btn" type="button">
+            <i class="fa-regular fa-clock"></i>
+          </button>
+        </div>
+
+        <div class="form-group">
+          <label>Tienda apta para la toma</label>
+          <select>
+            <option>Seleccionar</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARD: PREGUNTAS -->
+    <section class="card-section">
+      <h2 class="card-section__title">Preguntas</h2>
+
+      <div class="questions-header">
+        <span>Preguntas</span>
+        <span>Sí</span>
+        <span>No</span>
+        <span>Avance</span>
+      </div>
+
+      <div class="questions-list">
+
+        <div class="question-row">
+          <p>¿La iluminación es adecuada en todas las áreas (venta, bodega, probadores)?</p>
+
+          <div class="question-row__options">
+            <label><input type="radio" name="q1" /> <span></span></label>
+            <label><input type="radio" name="q1" /> <span></span></label>
+          </div>
+
+          <div class="question-row__progress">
+            <span class="question-row__percent">20%</span>
+            <span class="progress-line progress-line--red"></span>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p>¿Los espacios de tránsito están libres de obstáculos (pasillos, accesos, etc.)?</p>
+
+          <div class="question-row__options">
+            <label><input type="radio" name="q2" /> <span></span></label>
+            <label><input type="radio" name="q2" /> <span></span></label>
+          </div>
+
+          <div class="question-row__progress">
+            <span class="question-row__percent">55%</span>
+            <span class="progress-line progress-line--yellow"></span>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p>¿El local cuenta con climatización o ventilación adecuada para el equipo de trabajo?</p>
+
+          <div class="question-row__options">
+            <label><input type="radio" name="q3" /> <span></span></label>
+            <label><input type="radio" name="q3" /> <span></span></label>
+          </div>
+
+          <div class="question-row__progress">
+            <span class="question-row__percent">80%</span>
+            <span class="progress-line progress-line--green"></span>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p>¿La mercadería está correctamente etiquetada con código de barras o SKU?</p>
+
+          <div class="question-row__options">
+            <label><input type="radio" name="q4" /> <span></span></label>
+            <label><input type="radio" name="q4" /> <span></span></label>
+          </div>
+
+          <div class="question-row__progress">
+            <span class="question-row__percent">20%</span>
+            <span class="progress-line progress-line--red"></span>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p>¿Los artículos fuera de lugar están identificados o separados?</p>
+
+          <div class="question-row__options">
+            <label><input type="radio" name="q5" /> <span></span></label>
+            <label><input type="radio" name="q5" /> <span></span></label>
+          </div>
+
+          <div class="question-row__progress">
+            <span class="question-row__percent">55%</span>
+            <span class="progress-line progress-line--yellow"></span>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p>¿Los productos en bodega están clasificados y ordenados?</p>
+
+          <div class="question-row__options">
+            <label><input type="radio" name="q6" /> <span></span></label>
+            <label><input type="radio" name="q6" /> <span></span></label>
+          </div>
+
+          <div class="question-row__progress">
+            <span class="question-row__percent">80%</span>
+            <span class="progress-line progress-line--green"></span>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p>¿Están identificados los productos en mal estado o fuera de sistema?</p>
+
+          <div class="question-row__options">
+            <label><input type="radio" name="q7" /> <span></span></label>
+            <label><input type="radio" name="q7" /> <span></span></label>
+          </div>
+
+          <div class="question-row__progress">
+            <span class="question-row__percent">80%</span>
+            <span class="progress-line progress-line--green"></span>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p>¿La tienda y sus bodegas están en condiciones higiénicas adecuadas?</p>
+
+          <div class="question-row__options">
+            <label><input type="radio" name="q8" /> <span></span></label>
+            <label><input type="radio" name="q8" /> <span></span></label>
+          </div>
+
+          <div class="question-row__progress">
+            <span class="question-row__percent">20%</span>
+            <span class="progress-line progress-line--red"></span>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p>¿La tienda cuenta con escaleras para los trabajos de altura?</p>
+
+          <div class="question-row__options">
+            <label><input type="radio" name="q9" /> <span></span></label>
+            <label><input type="radio" name="q9" /> <span></span></label>
+          </div>
+
+          <div class="question-row__progress">
+            <span class="question-row__percent">55%</span>
+            <span class="progress-line progress-line--yellow"></span>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p>¿La tienda destina un área y sus implementos para la mesa de trabajo?</p>
+
+          <div class="question-row__options">
+            <label><input type="radio" name="q10" /> <span></span></label>
+            <label><input type="radio" name="q10" /> <span></span></label>
+          </div>
+
+          <div class="question-row__progress">
+            <span class="question-row__percent">80%</span>
+            <span class="progress-line progress-line--green"></span>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p>¿Se envió la nómina de participantes a la tienda?</p>
+
+          <div class="question-row__options">
+            <label><input type="radio" name="q11" /> <span></span></label>
+            <label><input type="radio" name="q11" /> <span></span></label>
+          </div>
+
+          <div class="question-row__progress">
+            <span class="question-row__percent">20%</span>
+            <span class="progress-line progress-line--red"></span>
+          </div>
+        </div>
+
+        <div class="question-row">
+          <p>¿Es necesaria segunda visita?</p>
+
+          <div class="question-row__options">
+            <label><input type="radio" name="q12" /> <span></span></label>
+            <label><input type="radio" name="q12" /> <span></span></label>
+          </div>
+
+          <div class="question-row__progress">
+            <span class="question-row__percent">55%</span>
+            <span class="progress-line progress-line--yellow"></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CARD: INVENTARIO -->
+    <section class="card-section">
+      <h2 class="card-section__title">Inventario</h2>
+
+      <div class="form-grid form-grid--3">
+        <div class="form-group form-group--icon">
+          <label>Horario de llegada bodega</label>
+          <input type="text" placeholder="-" />
+          <button class="input-icon-btn" type="button">
+            <i class="fa-regular fa-clock"></i>
+          </button>
+        </div>
+
+        <div class="form-group form-group--icon">
+          <label>Horario de inicio bodega</label>
+          <input type="text" placeholder="-" />
+          <button class="input-icon-btn" type="button">
+            <i class="fa-regular fa-clock"></i>
+          </button>
+        </div>
+
+        <div class="form-group form-group--icon">
+          <label>Horario de llegada sala</label>
+          <input type="text" placeholder="-" />
+          <button class="input-icon-btn" type="button">
+            <i class="fa-regular fa-clock"></i>
+          </button>
+        </div>
+
+        <div class="form-group form-group--icon">
+          <label>Horario de zonificación de sala</label>
+          <input type="text" placeholder="-" />
+          <button class="input-icon-btn" type="button">
+            <i class="fa-regular fa-clock"></i>
+          </button>
+        </div>
+
+        <div class="form-group">
+          <label>Supervisores</label>
+          <input type="text" placeholder="-" />
+        </div>
+
+        <div class="form-group">
+          <label>Operador de sistemas</label>
+          <input type="text" placeholder="-" />
+        </div>
+
+        <div class="form-group">
+          <label>Dotación bodega</label>
+          <input type="text" placeholder="-" />
+        </div>
+
+        <div class="form-group">
+          <label>Dotación sala de ventas</label>
+          <input type="text" placeholder="-" />
+        </div>
+
+        <div class="form-group">
+          <label>Dotación de tienda</label>
+          <input type="text" placeholder="-" />
+        </div>
+
+        <div class="form-group">
+          <label>Cumple los estándares para la toma de inventario</label>
+          <input type="text" placeholder="-" />
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTONES FINALES -->
+    <section class="actions">
+      <button class="btn btn-outline" type="button">Guardar borrador</button>
+
+      <button class="btn btn-primary" type="button"
+        onclick="document.getElementById('modalCumplimiento').hidden = false">
+        Continuar
+      </button>
+    </section>
+
+    <!-- MODAL: CUMPLIMIENTO GENERAL -->
+    <div class="modal-overlay" id="modalCumplimiento" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+        <div class="modal-header">
+          <h3 class="modal-title" id="modalTitle">CUMPLIMIENTO GENERAL</h3>
+
+          <button type="button" class="modal-close" aria-label="Cerrar"
+            onclick="document.getElementById('modalCumplimiento').hidden = true">
+            ✕
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-score">
+            <span class="modal-score__value" id="cumplimientoPorcentaje">70%</span>
+          </div>
+
+          <div class="modal-bar" aria-label="Barra de cumplimiento">
+            <div class="modal-bar__segment modal-bar__segment--bad"></div>
+            <div class="modal-bar__segment modal-bar__segment--mid"></div>
+            <div class="modal-bar__segment modal-bar__segment--good"></div>
+          </div>
+
+          <div class="modal-summary">
+            <div class="modal-summary__row">
+              <div class="modal-summary__icon modal-summary__icon--yes">✓</div>
+              <div class="modal-summary__text">
+                <span class="modal-summary__label">SI :</span>
+                <span class="modal-summary__value" id="totalSi">14</span>
+              </div>
+            </div>
+
+            <div class="modal-summary__row">
+              <div class="modal-summary__icon modal-summary__icon--no">✕</div>
+              <div class="modal-summary__text">
+                <span class="modal-summary__label">NO :</span>
+                <span class="modal-summary__value" id="totalNo">4</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Font Awesome para íconos -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>

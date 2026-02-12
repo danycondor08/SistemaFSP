@@ -1,0 +1,365 @@
+/* ---------- Base ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f6;
+}
+
+/* ---------- Header superior ---------- */
+.app-header {
+  height: 64px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.app-header__left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.app-header__logo img {
+  height: 44px;
+}
+
+.app-header__title {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.app-header__right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.app-header__user-name {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.app-header__avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #f5d1d7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8b1828;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ---------- Main ---------- */
+.app-main {
+  max-width: 1200px;
+  margin: 1.8rem auto 2.5rem;
+  padding: 0 1.5rem 2rem;
+}
+
+/* ---------- Stepper ---------- */
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5dde3;
+  border-radius: 4px;
+  padding: 0.9rem 2rem;
+  margin-bottom: 1.8rem;
+}
+
+.stepper__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #7d7d7d;
+}
+
+.stepper__circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid #8b1828;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.78rem;
+  color: #8b1828;
+  background: transparent;
+}
+
+.stepper__item--active .stepper__circle {
+  background: #8b1828;
+  color: #ffffff;
+}
+
+.stepper__item--active span {
+  color: #8b1828;
+  font-weight: 500;
+}
+
+/* ---------- Cards generales ---------- */
+.card-section {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.6rem 1.8rem 1.8rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1.6rem;
+}
+
+.card-section__title {
+  font-size: 1rem;
+  margin-bottom: 1.3rem;
+  color: #444;
+}
+
+/* ---------- Botones ---------- */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.9rem;
+  margin-top: 1.2rem;
+}
+
+.btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #8b1828;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #6c101f;
+}
+
+.btn-outline {
+  background: #ffffff;
+  color: #8b1828;
+  border: 1px solid #8b1828;
+}
+
+.btn-outline:hover {
+  background: #f8e4e8;
+}
+
+/* ---------- Card de upload ---------- */
+.upload-card {
+  padding-bottom: 2.1rem;
+}
+
+.upload-dropzone {
+  margin-top: 1.6rem;
+  border-radius: 10px;
+  border: 1px dashed #d3d3d3;
+  background: #fbfbfd;
+  min-height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* input hidden */
+.upload-dropzone input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-dropzone__inner {
+  height: 100%;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.upload-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #f0f0f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9a9a9a;
+  font-size: 1.4rem;
+}
+
+.upload-dropzone p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* hover drag */
+.upload-dropzone--hover {
+  border-color: #8b1828;
+  background: #fff7fa;
+}
+
+/* botones alineados a la derecha en esta card */
+.actions--right {
+  margin-top: 1.6rem;
+  justify-content: flex-end;
+}
+
+/* ---------- Footer ---------- */
+.app-footer {
+  height: 48px;
+  background: #dedede;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  font-size: 0.78rem;
+  color: #666;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  .app-header {
+    padding: 0 1rem;
+  }
+
+  .app-main {
+    padding: 0 1rem 2rem;
+  }
+
+  .stepper {
+    padding: 0.7rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .app-footer {
+    flex-direction: column;
+    gap: 0.3rem;
+    height: auto;
+    padding: 0.7rem 1rem;
+    text-align: center;
+  }
+}
+
+/* ---------- Subtítulo de sección ---------- */
+.carta-subtitle {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 1.3rem;
+}
+
+/* ---------- Form grid (3 columnas) ---------- */
+.form-grid {
+  display: grid;
+  gap: 1.1rem 1.2rem;
+}
+
+.form-grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 992px) {
+  .form-grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .form-grid--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-group label {
+  font-size: 0.83rem;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  padding: 0.7rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  background: #fafafa;
+}
+
+.form-group input::placeholder {
+  color: #b0b0b0;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #8b1828;
+  background: #ffffff;
+}
+
+/* input con ícono a la derecha */
+.form-group--icon {
+  position: relative;
+}
+
+.input-icon-btn {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: none;
+  background: #8b1828;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+/* botón con ícono (descargar) */
+.btn-icon i {
+  margin-right: 0.4rem;
+}
+
+/* acciones centradas para el botón de descarga */
+.actions--center {
+  justify-content: center;
+}
